@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+
+
+
+
+<div>
+ 
+  <div class="awe-section-3">
+    <div class="gallery_sec">
+      <div class="container">
+        <div class="row justify-content-center">
+          <h3 class="g-title"><span>TẦNG MẪU</span></h3>
+        </div>
+        <div class="row">
+          <div class="g-item col-4 card" style="background: black; color: white; border-color: white">
+            {% for i in floors %}
+            
+              <img src="{{ BASIC_DIR }}/{{i.image}}" alt="">
+              <div class="card-body">
+                <h5 class="card-title">{{ i.name }}</h5>
+                <div class="card-text">
+                  <p class="mb-0">Diện tích: {{ i.area  }}m<sup>2</sup></p>
+                  <p class="mb-0">Sức chứa: {{ i.capacity }}</p>
+  
+                </div>
+              </div>
+              {% endfor %}
+          </div>
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+{% endblock %}

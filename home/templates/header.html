@@ -1,0 +1,64 @@
+
+<!--Header-->
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}"/>
+
+<div class="row shadow-sm fixed-top">
+  <!--Logo-->
+  <div class="col-2">
+    <div>
+      <img class="tranform_img" src="{% static 'image/PKL.png' %}" height="200px" width="200px"/>
+    </div>
+  </div>
+
+  <div class="col-10">
+    <div class="row text_header">
+      <div class="col-8 none_padding">
+        <ul class="d-flex justify-content-between align-items-center nav">
+
+          <li class="nav-item" width="14.29%">
+            <a href="{% url 'home' %}">Trang Chủ</a>
+          </li>
+          <li class="nav-item" width="14.29%">
+            <a href="#about">Giới thiệu</a>
+          </li>
+          <li class="nav-item" width="14.29%">
+            <a href="{% url 'home' %}">Tầng</a>
+          </li>
+          <li class="nav-item" width="14.29%">
+            <a href="{% url 'home' %}">Hợp đồng</a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-3 none_padding">
+      
+        <ul class="d-flex justify-content-end align-items-center nav">
+          <li class="nav-item" width="14.29%">
+            <label for=""></label>
+          </li>
+          <li class="nav-item" width="14.29%">
+            <a href="{% url 'logout' %}">Đăng xuất</a>
+          </li>
+
+        </ul>
+   
+        <ul class="d-flex justify-content-between align-items-center nav">
+            <li class="nav-item">
+              <a href="{% url 'login' %}">Login</a>    
+            </li>
+
+            <li class="nav-item">
+              <a href="{% url 'register' %}">Signup</a>
+            </li>
+
+        </ul>
+
+      </div>
+      
+    
+    </div>
+  </div>
+</div>
